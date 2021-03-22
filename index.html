@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component library of React-vite</title>
+  <style>
+    .not-support {
+      padding: 180px 0;
+      box-sizing: border-box;
+      text-align: center;
+      height: 100%;
+      z-index: 10000000000;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: white;
+    }
+  </style>
+  <!--[if lt IE 10]>
+      <style>#root{display:none;}</style>
+    <![endif]-->
+</head>
+<body>
+  <noscript>
+    <div class="not-support">
+      <h1>您的浏览器不支持本系统</h1>
+      <h2>要使用本系统请打开浏览器的Javascript</h2>
+    </div>
+  </noscript>
+  <!--[if lt IE 10]>
+    <div class="not-support">
+      <h1>您的浏览器不支持本系统</h1>
+      <h2>请使用Firefox内核, Google Chrome内核或IE10及以上版本</h2>
+    </div>
+  <![endif]-->
+  <div id="root">
+    <style>
+      body {
+        margin: 0;
+      }
+      #loadding {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      #loadding > span {
+        display: inline-block;
+        width: 8px;
+        height: 100%;
+        margin-right: 5px;
+        border-radius: 4px;
+        -webkit-animation: load 1.04s ease infinite;
+        animation: load 1.04s ease infinite;
+      }
+      @keyframes load {
+        0%,
+        100% {
+          height: 40px;
+          background: #98beff;
+        }
+        50% {
+          height: 60px;
+          margin-top: -20px;
+          background: #3e7fee;
+        }
+      }
+    </style>
+    <div id="loadding">
+      <span></span>
+      <span style="animation-delay: 0.13s"></span>
+      <span style="animation-delay: 0.26s"></span>
+      <span style="animation-delay: 0.39s"></span>
+      <span style="animation-delay: 0.52s"></span>
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const $loadding = document.getElementById('loadding');
+      if (!$loadding) {
+        return;
+      }
+      $loadding.style.display = 'none';
+      $loadding.parentNode.removeChild($loadding);
+    });
+  </script>
+</body>
+</html>

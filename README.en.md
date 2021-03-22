@@ -1,7 +1,7 @@
 # react-vite-template
 
 #### Description
-使用vite2构建的react开发模版，组件库为antd4.x
+{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
 
 #### Software Architecture
 Software architecture description

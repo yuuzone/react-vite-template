@@ -1,37 +1,42 @@
-# react-vite-template
+# TEMPLATE-LIBRARY
 
-#### 介绍
-使用vite2构建的react开发模版，组件库为antd4.x
+## 技术栈
 
-#### 软件架构
-软件架构说明
+- React
+- React-router
+- Antd4.x
+- Less
+- Vite
 
+## 规范
 
-#### 安装教程
+- Typescript
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 目录结构
 
-#### 使用说明
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+TEMPLATE-LIBRARY
+    ├── public                            // 静态资源文件夹，用于存放图片等静态资源，使用路径以 / 开头
+    ├── src  
+    │   ├── packages                      // 全局自定义组件包目录   
+    │       ├── demo                      // 组件样例目录
+    │           ├── index.tsx             // 组件主体文件
+    │           ├── index.less            // 组件主体样式
+    │       ├── index.less                // 全局组件样式导出
+    │       ├── index.tsx                 // 全局组件导出      
+    │   ├── site                          // 展示站点目录
+    │       ...
+    ...
 
-#### 参与贡献
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## 开发及部署
 
+```cmd
+npm install && npm run dev
+```
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```cmd
+npm run build
+```
